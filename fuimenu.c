@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <curses.h>
-#include "menu.h"
+#include "fuimenu.h"
 
 
 Menu* menu_new(int sx, int sy, uint8_t flags)

@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <curses.h>
-#include "strwin.h"
+#include "fuistrwin.h"
 
 
 StringWin* strwin_new(int sx, int sy, char* str, chtype attr, uint8_t flags)

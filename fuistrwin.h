@@ -1,5 +1,5 @@
-#ifndef STRWIN_H
-#define STRWIN_H
+#ifndef FUISTRWIN_H
+#define FUISTRWIN_H
 
 #include <stdint.h>
 #include <curses.h>

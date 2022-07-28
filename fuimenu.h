@@ -1,5 +1,5 @@
-#ifndef UIMENU_H
-#define UIMENU_H
+#ifndef FUIMENU_H
+#define FUIMENU_H
 
 #include <stdint.h>
 
