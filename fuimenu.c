@@ -152,11 +152,8 @@ void menu_del_button(Menu* menu, int which_one)
 }
 
 
-int menu_draw(Menu* menu, int x, int y, int term_sx, int term_sy)
+int menu_draw(Menu* menu, int x, int y)
 {
-	if (x + menu->sx_b > term_sx || y + menu->sy_b > term_sy)
-		return WIN_CROSSES_TERMINAL_BOUNDS;
-
 	WINDOW* menuwin_b;
 	WINDOW* menuwin;
 	if (menu->flags & MENU_BORDERED)

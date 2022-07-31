@@ -221,11 +221,8 @@ void strwin_nextpage(StringWin* strwin, int n)
 }
 
 
-int strwin_draw(StringWin* strwin, int x, int y, int term_sx, int term_sy)
+int strwin_draw(StringWin* strwin, int x, int y)
 {
-	if (x + strwin->sx_b > term_sx || y + strwin->sy_b > term_sy)
-		return WIN_CROSSES_TERMINAL_BOUNDS;
-
 	WINDOW* strwinwin;
 	WINDOW* strwinwin_b;
 	if (strwin->flags & STRWIN_BORDERED)

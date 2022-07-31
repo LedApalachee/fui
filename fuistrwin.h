@@ -4,8 +4,6 @@
 #include <stdint.h>
 #include <curses.h>
 
-#define WIN_CROSSES_TERMINAL_BOUNDS 1
-
 
 typedef struct StringWin
 {
@@ -33,7 +31,7 @@ void       strwin_insert(StringWin* strwin, char* str, chtype attr, int where, i
 void       strwin_cut(StringWin* strwin, int from, int to, int recount_pages);
 void       strwin_wordwrap(StringWin* strwin, int recount_pages);
 void       strwin_nextpage(StringWin* strwin, int n);
-int        strwin_draw(StringWin* strwin, int x, int y, int term_sx, int term_sy);
+int        strwin_draw(StringWin* strwin, int x, int y);
 void       strwin_free(StringWin* strwin);
 
 
@@ -54,7 +52,6 @@ void       strwin_free(StringWin* strwin);
 	if "n" is -1, the previous one.
 
 	"strwin_draw" is used to draw this StringWin object on the screen.
-				  returns "WIN_CROSSES_TERMINAL_BOUNDS" if you understood what
 
 	"recount_pages" parameter is a bool value:
 	if it's "true" (1), then the function calls "strwin_recount" to recount pages,

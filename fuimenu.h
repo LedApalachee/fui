@@ -3,8 +3,6 @@
 
 #include <stdint.h>
 
-#define WIN_CROSSES_TERMINAL_BOUNDS 1
-
 
 typedef struct MenuButton
 {
@@ -47,7 +45,7 @@ void  menu_add_button(Menu* menu, char* button_text, int button_value);
 void  menu_select(Menu* menu, int which_button);
 void  menu_next(Menu* menu, int n);
 void  menu_del_button(Menu* menu, int which_one);
-int   menu_draw(Menu* menu, int where_x, int where_y, int term_sx, int term_sy);
+int   menu_draw(Menu* menu, int x, int y);
 void  menu_free(Menu* menu);
 
 // returns a selected button's value
@@ -65,7 +63,6 @@ void  menu_free(Menu* menu);
 	"menu_next" - an upper (if "n" equals -1) or lower (if "n" equals 1) button is makred as "selected"
 	"menu_del_button" - deletes the given button
 	"menu_draw" - draws menu at the given position
-				  returns "WIN_CROSSES_TERMINAL_BOUNDS" if you understood what
 	"menu_free" - frees the given "Menu" struct
 
 	Notice: if MENU_BORDERED is not set then sx = sx_b and sy = sy_b
